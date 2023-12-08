@@ -108,7 +108,7 @@ h1 {
    padding: 40px;
    border: 2px solid #7a797a;
    width: 40%;
-   height: 60%;
+   height: auto;
    background-image: url("../images/project.png"), url("../images/project2.png"), linear-gradient(to bottom, #191919, #232323, #333333);
 }
 
