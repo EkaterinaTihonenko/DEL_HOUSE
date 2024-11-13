@@ -19,6 +19,7 @@ buttonModal.onclick = function () {
 span.onclick = function () {
   modal.style.display = "none";
 };
+
 buttonProjects.onclick = function () {
   modal.style.display = "none";
   modalContent.style.display = "block";

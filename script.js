@@ -48,3 +48,5 @@ for (let i = 0; i < progectImg.length; i = i + 1) {
     progectImg[i].classList.toggle("img-show");
   });
 }
+
+document.getElementById("year").innerHTML = new Date().getFullYear();

@@ -70,7 +70,6 @@ a {
 
 section,
 footer {
-   font-family: "EB Garamond", serif;
    padding: 3%;
    text-align: center;
 }
@@ -134,6 +133,7 @@ button {
    border: 2px solid #ffffff;
    margin: 3% auto;
    width: 200px;
+   font-size: 15px;
    transition: 0.4s;
 }
 
@@ -294,7 +294,7 @@ button {
 .phone {
    font-size: 1.2rem;
    align-items: center;
-   width: 20%;
+   white-space: nowrap;
 }
 
 .title {
@@ -310,21 +310,17 @@ button {
 }
 
 .projects-card-wrapper,
-address,
-footer {
+.w-footer {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 1rem;
 }
 
 .section-projects-cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
    margin-bottom: 5%;
-}
-
-.section-projects-cards {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 1rem;
 }
 
 .img-show {
@@ -432,10 +428,13 @@ footer {
    border-image: linear-gradient(to left, #3b3b3b 25%, #7a797a 25% 50%, #3b3b3b 50% 75%, #7a797a 75%) 1/ 1/ 0 stretch;
 }
 
-address,
-footer {
-   gap: 2%;
-   margin: 2%;
+.t-footer {
+   font-size: 14px;
+   max-width: 50vw;
+}
+
+address {
+   margin: 0 20px;
 }
 
 .iframe-block {
@@ -444,7 +443,25 @@ footer {
 
 iframe {
    width: 50vw;
-   height: 300px;
+   height: 400px;
+}
+
+.l-item>p,
+.l-item>img {
+   display: block;
+}
+
+
+
+.l-item,
+.l-item>a {
+   display: flex;
+   align-items: center;
+   margin: 2px 0;
+}
+
+.map-teg {
+   margin: 0 4px 0 0;
 }
 
 .politick,
@@ -490,12 +507,15 @@ iframe {
       position: unset;
    }
 
+   .section-projects-cards {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
    .section-projects-card {
       font-size: 0.7rem;
    }
 
    iframe {
-      width: 100%;
       height: 300px;
    }
 }
@@ -540,10 +560,6 @@ iframe {
       height: 40vh;
    }
 
-   .header-wrapper-navigation {
-      justify-content: center;
-   }
-
    .logo {
       margin: 0;
    }
@@ -579,6 +595,21 @@ iframe {
       font-size: 0.8rem;
    }
 
+   iframe {
+      width: 90vw;
+   }
+
+   .projects-card-wrapper,
+   .w-footer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+   }
+
+   .t-footer {
+      max-width: 70vw;
+   }
+
 }
 
 @media screen and (max-width:690px) {
@@ -597,6 +628,10 @@ iframe {
    .logo {
       display: block;
       margin: 2%;
+   }
+
+   .l-tel {
+      display: none;
    }
 
    .phone {
@@ -627,6 +662,10 @@ iframe {
 @media screen and (max-width:581px) {
    .section-projects-cards {
       grid-template-columns: repeat(1, 1fr);
+   }
+
+   .t-footer {
+      max-width: 90vw;
    }
 }
 
